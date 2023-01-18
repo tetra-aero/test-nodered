@@ -1,0 +1,267 @@
+[
+    {
+        "id": "78d381f5d5c8876d",
+        "type": "tab",
+        "label": "flow1 DashBoard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "52f12d0b5cfac566",
+        "type": "inject",
+        "z": "78d381f5d5c8876d",
+        "name": "Push to START",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 1500,
+        "wires": [
+            [
+                "59a41b0b60c48a50",
+                "33b610a35c6386d5"
+            ]
+        ]
+    },
+    {
+        "id": "b0f8908ed071438f",
+        "type": "debug",
+        "z": "78d381f5d5c8876d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "59a41b0b60c48a50",
+        "type": "function",
+        "z": "78d381f5d5c8876d",
+        "name": "function hello_world",
+        "func": "msg.payload = \"Hello! World\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 1500,
+        "wires": [
+            [
+                "b0f8908ed071438f"
+            ]
+        ]
+    },
+    {
+        "id": "33b610a35c6386d5",
+        "type": "delay",
+        "z": "78d381f5d5c8876d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 1600,
+        "wires": [
+            [
+                "5215cd21625d2764"
+            ]
+        ]
+    },
+    {
+        "id": "5215cd21625d2764",
+        "type": "function",
+        "z": "78d381f5d5c8876d",
+        "name": "function hello_world",
+        "func": "msg.payload = \"Hello! World\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 1600,
+        "wires": [
+            [
+                "a711a89098280361"
+            ]
+        ]
+    },
+    {
+        "id": "a711a89098280361",
+        "type": "debug",
+        "z": "78d381f5d5c8876d",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "cd922e1251452712",
+        "type": "ui_button",
+        "z": "78d381f5d5c8876d",
+        "name": "",
+        "group": "041392e72eacebf6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button to 0",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 1720,
+        "wires": [
+            [
+                "d8de4e62aa569f38"
+            ]
+        ]
+    },
+    {
+        "id": "0e206d3f29b08b47",
+        "type": "ui_button",
+        "z": "78d381f5d5c8876d",
+        "name": "",
+        "group": "041392e72eacebf6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button to 100",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "100",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 1800,
+        "wires": [
+            [
+                "d8de4e62aa569f38"
+            ]
+        ]
+    },
+    {
+        "id": "d8de4e62aa569f38",
+        "type": "ui_slider",
+        "z": "78d381f5d5c8876d",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "041392e72eacebf6",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 430,
+        "y": 1720,
+        "wires": [
+            [
+                "06af12c6489a78f5"
+            ]
+        ]
+    },
+    {
+        "id": "06af12c6489a78f5",
+        "type": "ui_gauge",
+        "z": "78d381f5d5c8876d",
+        "name": "",
+        "group": "041392e72eacebf6",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "041392e72eacebf6",
+        "type": "ui_group",
+        "name": "デフォルト",
+        "tab": "4daa95e411aed0f6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4daa95e411aed0f6",
+        "type": "ui_tab",
+        "name": "Group Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
