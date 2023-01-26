@@ -1,0 +1,1802 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "de64696d7bfa7832",
+        "type": "socketcan-out",
+        "z": "f6f2187d.f17ca8",
+        "name": "socketcan-out",
+        "config": "dfa81fe57f2995ea",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "a30e28aafb08c321",
+                "c36540bda45e9c7a"
+            ]
+        ]
+    },
+    {
+        "id": "a30e28aafb08c321",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c36540bda45e9c7a",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "CANID Switch 0x13",
+        "property": "payload.canid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "4865",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4866",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4867",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4868",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4869",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4870",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4871",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4872",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4873",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4874",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4875",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4876",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4877",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4878",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4879",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4880",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4881",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4882",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4883",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4884",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4885",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4886",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4887",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4888",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 24,
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "a75fc96fe37643ec"
+            ],
+            [
+                "807b44eef17de87a"
+            ],
+            [
+                "75bf02b463a266fd"
+            ],
+            [
+                "88cdbff83b568af9"
+            ],
+            [
+                "3e62ac4b056267ef"
+            ],
+            [
+                "e4df276623bdf726"
+            ],
+            [
+                "5c617dfd518c7d2a"
+            ],
+            [
+                "2873614df2ba1c43"
+            ],
+            [
+                "2d20346e611dfca8"
+            ],
+            [
+                "eceb86a8a912f5c8"
+            ],
+            [
+                "59cd6c52452bb949"
+            ],
+            [
+                "30087e6883a685cc"
+            ],
+            [
+                "aab9158f29bcaac1"
+            ],
+            [
+                "cb395dc44720925a"
+            ],
+            [
+                "55133a829b67a39a"
+            ],
+            [
+                "d4670fd116fc4aba"
+            ],
+            [
+                "eeeed12f16319315"
+            ],
+            [
+                "5194e80fa07c4a82"
+            ],
+            [
+                "ccf9705923952994"
+            ],
+            [
+                "71c1e79b4e3d93e7"
+            ],
+            [
+                "ae60ec9f9d41dc02"
+            ],
+            [
+                "07c42b0650777a69"
+            ],
+            [
+                "f7d5d506c1fc225b"
+            ],
+            [
+                "99a627b05df60f6e"
+            ]
+        ]
+    },
+    {
+        "id": "a75fc96fe37643ec",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 1",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 180,
+        "wires": [
+            [
+                "31f7c11e93abc485",
+                "ea44581e6d31b6c3"
+            ]
+        ]
+    },
+    {
+        "id": "31f7c11e93abc485",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "807b44eef17de87a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 2",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 220,
+        "wires": [
+            [
+                "97fb6fca0201c138"
+            ]
+        ]
+    },
+    {
+        "id": "97fb6fca0201c138",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75bf02b463a266fd",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 3",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "f293e71c86085859"
+            ]
+        ]
+    },
+    {
+        "id": "f293e71c86085859",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88cdbff83b568af9",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 4",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 300,
+        "wires": [
+            [
+                "cec289941d3e330a"
+            ]
+        ]
+    },
+    {
+        "id": "cec289941d3e330a",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e62ac4b056267ef",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 5",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 340,
+        "wires": [
+            [
+                "1ceec38a1629e5dd"
+            ]
+        ]
+    },
+    {
+        "id": "1ceec38a1629e5dd",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4df276623bdf726",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 6",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 380,
+        "wires": [
+            [
+                "7e927006cb7e69c1"
+            ]
+        ]
+    },
+    {
+        "id": "7e927006cb7e69c1",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea44581e6d31b6c3",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c617dfd518c7d2a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 7",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 420,
+        "wires": [
+            [
+                "f2dc9b5c80b91c22"
+            ]
+        ]
+    },
+    {
+        "id": "2873614df2ba1c43",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 8",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "bf2b2197ba9df495"
+            ]
+        ]
+    },
+    {
+        "id": "bf2b2197ba9df495",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2d20346e611dfca8",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 9",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 500,
+        "wires": [
+            [
+                "6678395bcb82af5a"
+            ]
+        ]
+    },
+    {
+        "id": "6678395bcb82af5a",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eceb86a8a912f5c8",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 10",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 540,
+        "wires": [
+            [
+                "98496c2bd91fb4dc"
+            ]
+        ]
+    },
+    {
+        "id": "98496c2bd91fb4dc",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "59cd6c52452bb949",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 11",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 580,
+        "wires": [
+            [
+                "c110cd5e20edd9d6"
+            ]
+        ]
+    },
+    {
+        "id": "c110cd5e20edd9d6",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "30087e6883a685cc",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 12",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 620,
+        "wires": [
+            [
+                "1cf3862875da7a68"
+            ]
+        ]
+    },
+    {
+        "id": "1cf3862875da7a68",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2dc9b5c80b91c22",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 780,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aab9158f29bcaac1",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 13",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 700,
+        "wires": [
+            [
+                "6bb7f187dd1f0c6f"
+            ]
+        ]
+    },
+    {
+        "id": "6bb7f187dd1f0c6f",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb395dc44720925a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 14",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 740,
+        "wires": [
+            [
+                "4289ae65189fd490"
+            ]
+        ]
+    },
+    {
+        "id": "4289ae65189fd490",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55133a829b67a39a",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 15",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 780,
+        "wires": [
+            [
+                "c019ead945f50d47"
+            ]
+        ]
+    },
+    {
+        "id": "c019ead945f50d47",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4670fd116fc4aba",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 16",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 820,
+        "wires": [
+            [
+                "5c37e10506a73f88"
+            ]
+        ]
+    },
+    {
+        "id": "5c37e10506a73f88",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eeeed12f16319315",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 17",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 860,
+        "wires": [
+            [
+                "6345e573728722bd"
+            ]
+        ]
+    },
+    {
+        "id": "6345e573728722bd",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5194e80fa07c4a82",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 18",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 900,
+        "wires": [
+            [
+                "635eb434a201ccf3"
+            ]
+        ]
+    },
+    {
+        "id": "ccf9705923952994",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 19",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 940,
+        "wires": [
+            [
+                "a55b7cea93f7c5b9"
+            ]
+        ]
+    },
+    {
+        "id": "a55b7cea93f7c5b9",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71c1e79b4e3d93e7",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 20",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 980,
+        "wires": [
+            [
+                "c13979d058d0cce2"
+            ]
+        ]
+    },
+    {
+        "id": "c13979d058d0cce2",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae60ec9f9d41dc02",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 21",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1020,
+        "wires": [
+            [
+                "6e4b9968ec5536a0"
+            ]
+        ]
+    },
+    {
+        "id": "6e4b9968ec5536a0",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07c42b0650777a69",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 22",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1060,
+        "wires": [
+            [
+                "da9086384f9bd35f"
+            ]
+        ]
+    },
+    {
+        "id": "da9086384f9bd35f",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7d5d506c1fc225b",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 23",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1100,
+        "wires": [
+            [
+                "bd9823989b9aece1"
+            ]
+        ]
+    },
+    {
+        "id": "bd9823989b9aece1",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "635eb434a201ccf3",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99a627b05df60f6e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 24",
+        "func": "msg.payload = (msg.payload.data[0] * 256) + (msg.payload.data[1]);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1140,
+        "wires": [
+            [
+                "418cc62293bfb4f3"
+            ]
+        ]
+    },
+    {
+        "id": "418cc62293bfb4f3",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "f5a3a3575779a77e",
+        "order": 0,
+        "width": "1",
+        "height": "10",
+        "label": "chart_1",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "600",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dfa81fe57f2995ea",
+        "type": "socketcan-config",
+        "interface": "vcan0"
+    },
+    {
+        "id": "f5a3a3575779a77e",
+        "type": "ui_group",
+        "name": "デフォルト",
+        "tab": "0c99000c7d2ad68e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0c99000c7d2ad68e",
+        "type": "ui_tab",
+        "name": "home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
